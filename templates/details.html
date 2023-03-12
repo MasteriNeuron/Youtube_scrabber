@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+
+	<title>Results</title>
+</head>
+<body>
+
+	<table cellspacing="0">
+      <tr>
+         <th>Title</th>
+         <th>Thumbnail</th>
+         <th>Link</th>
+         <th>View Count</th>
+         <th>Time Since Posted</th>
+      </tr>
+         {% for detail in details %}
+      <tr>
+         <td>{{detail.title}}</td>
+         <td>{{detail.thumbnail}}</td>
+         <td>{{detail.link}}</td>
+         <td>{{detail.viewcount}}</td>
+         <td>{{detail.age}}</td>
+          {% endfor %}
+   </table>
+</body>
+</html>
