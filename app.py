@@ -23,10 +23,7 @@ def details():
 		try:
 			input_text = request.form['text']
 			url = f'https://www.youtube.com/@{input_text}/videos'
-			headers = {
-			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0',
-			'Accept-Language': 'en-US,en;q=0.9'
-			}
+			headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"}
 
 			logging.info("Html...")
 			response = requests.get(url, headers=headers)
